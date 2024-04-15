@@ -1,4 +1,4 @@
-# AWS Terraform Modules
+![스크린샷 2024-04-15 192828](https://github.com/dongkoony/AWS_Terraform_Module/assets/109497684/0f7e9a53-14ed-4776-bf98-ce6bcb933726)
 
 이 저장소는 AWS 인프라를 Terraform으로 프로비저닝할 때 사용할 수 있는 전문적인 Terraform 모듈 집합입니다. 실무에서 사용되는 모범 사례와 권장 사항을 따르며, 모듈의 재사용성과 유지 관리성을 높이는 것이 목표입니다.
 
