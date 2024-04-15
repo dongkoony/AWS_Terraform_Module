@@ -15,3 +15,4 @@ variable "instance_tags_name" {
   type        = string
   default     = "example-instance"
 }
+

@@ -49,3 +49,44 @@ variable "ingress_rules" {
     }
   ]
 }
+
+variable "ami_owners" {
+  description = "AMI 소유자 ID 목록"
+  type        = map(map(list(string)))
+  default = {
+    "Amazon Linux" = {
+      "2" = ["amazon"]
+    }
+    "Amazon Linux (Legacy)" = {
+      "1" = ["137112412989", "591542846629", "679593333241", "099720109477"]
+    }
+    "Ubuntu" = {
+      "20.04" = ["099720109477"]
+      "22.04" = ["099720109477"]
+    }
+    "Red Hat Enterprise Linux" = {
+      "9" = ["309956199498"]
+    }
+    "SUSE Linux Enterprise Server" = {
+      "15 SP5" = ["013907871546", "053360076492"]
+    }
+    "CentOS" = {
+      "7" = ["679593333241"]
+    }
+    "Debian" = {
+      "12" = ["679593333241"]
+    }
+  }
+}
+variable "ami_owner" {
+  description = "사용할 AMI 소유자 ID"
+  type        = list(string)
+}
+
+variable "instance_type" {
+  description = "EC2 인스턴스 유형"
+  type        = string
+  default     = "t2.micro"
+}
+
+# 기타 변수 정의...
