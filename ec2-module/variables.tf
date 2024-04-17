@@ -61,7 +61,6 @@ variable "ami_owners" {
       "1" = ["137112412989", "591542846629", "679593333241", "099720109477"]
     }
     "Ubuntu" = {
-      "20.04" = ["099720109477"]
       "22.04" = ["099720109477"]
     }
     "Red Hat Enterprise Linux" = {
@@ -82,11 +81,3 @@ variable "ami_owner" {
   description = "사용할 AMI 소유자 ID"
   type        = list(string)
 }
-
-variable "instance_type" {
-  description = "EC2 인스턴스 유형"
-  type        = string
-  default     = "t2.micro"
-}
-
-# 기타 변수 정의...

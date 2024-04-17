@@ -1,6 +1,6 @@
 data "aws_ami" "ubuntu_22_04" {
   most_recent = true
-  owners      = var.ami_owners["Ubuntu"]
+  owners      = var.ami_owners["Ubuntu"]["22.04"]
   
   filter {
     name   = "name"
@@ -13,7 +13,7 @@ resource "aws_instance" "ec2_instance" {
   instance_type          = var.instance_type
   key_name               = var.key_pair
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
-  user_data              = file("${path.module}scripts/user_data.sh")
+  user_data              = file("${path.module}/scripts/user_data.sh")
 
   root_block_device {
     volume_size = var.root_volume_size
